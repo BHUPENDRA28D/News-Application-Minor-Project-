@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewsDeatilActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black_shade_1"
+        app:titleTextColor="@color/yellow"
+        android:id="@+id/detailToolbar"
+        app:title="News"></androidx.appcompat.widget.Toolbar>
+    
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/idBtnRead"
+        android:layout_below="@id/detailToolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:id="@+id/ImageviewNews"
+                android:layout_margin="3dp"
+                android:padding="3dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Title"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:layout_below="@id/ImageviewNews"
+                android:id="@+id/detailTitle"
+                android:layout_margin="4dp"
+                android:padding="4dp"/>
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Sub Title"
+               android:textSize="17sp"
+               android:textStyle="bold"
+               android:textColor="@color/black_shade_1"
+               android:layout_below="@id/detailTitle"
+               android:id="@+id/detailSub"
+               android:layout_margin="4dp"
+               android:padding="4dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Content"
+                android:textSize="17sp"
+                android:layout_below="@id/detailSub"
+                android:id="@+id/detailContent"
+                android:layout_margin="4dp"
+                android:padding="4dp"/>
+
+
+        </RelativeLayout>
+    </ScrollView>
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Read Full News"
+            android:id="@+id/idBtnRead"
+            android:background="@color/yellow"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"/>
+
+
+
+
+</RelativeLayout>
